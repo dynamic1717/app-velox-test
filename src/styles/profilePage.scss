@@ -1,0 +1,31 @@
+@import './variables.scss';
+
+.profile-page {
+  margin-left: 190px;
+  padding: 1rem 2rem;
+}
+
+.appointment__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.appointment__more {
+  text-align: center;
+  p {
+    margin: 0;
+  }
+  a {
+    color: #50caff;
+    text-decoration: underline;
+  }
+}
+
+.e-card__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}

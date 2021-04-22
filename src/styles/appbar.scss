@@ -1,0 +1,41 @@
+@import './variables.scss';
+
+.appbar {
+  display: grid;
+  grid-template-columns: 190px auto;
+  height: 55px;
+
+  &__logo {
+    width: 190px;
+    background-color: $color-dark;
+    color: #fff !important;
+    font-size: 14px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-blue;
+    padding: 0 2rem;
+    h3 {
+      color: #fff;
+      margin: 0;
+    }
+  }
+
+  &__btn {
+    border: none;
+    background: transparent;
+    margin-left: 0.8rem;
+  }
+
+  &__profile {
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    border: 2px solid #fff;
+  }
+}

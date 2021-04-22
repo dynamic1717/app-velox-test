@@ -1,0 +1,57 @@
+@import './variables.scss';
+
+.sidebar {
+  position: fixed;
+  height: calc(100vh - 55px);
+  width: 190px;
+  background-color: $color-dark;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+
+  &__logo {
+    color: #fff;
+    height: 55px;
+    padding: 0.9rem;
+  }
+
+  &__li {
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  &__link {
+    height: 46px;
+    color: #fff;
+    display: flex !important;
+    align-items: center;
+    img {
+      margin-right: 0.7rem;
+    }
+    p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    &:hover {
+      background-color: $bg-color;
+      color: $color-purple;
+      border-left: 3px solid $color-purple;
+      img {
+        filter: brightness(0) saturate(100%) invert(39%) sepia(72%)
+          saturate(2980%) hue-rotate(230deg) contrast(103%);
+      }
+    }
+
+    &_active {
+      background-color: $bg-color;
+      color: $color-purple;
+      border-left: 3px solid $color-purple;
+      img {
+        filter: brightness(0) saturate(100%) invert(39%) sepia(72%)
+          saturate(2980%) hue-rotate(230deg) contrast(103%);
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+@import './variables.scss';
+
+.appointments-page {
+  margin-left: 190px;
+  padding: 1rem 2rem;
+  height: 90vh;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    a {
+      margin-right: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    h5 {
+      margin: 0;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    height: 95%;
+  }
+
+  &__list,
+  &__list-empty {
+    width: 510px;
+    overflow: auto;
+    margin-right: 3rem;
+  }
+
+  &__calendar {
+    width: 573px;
+    height: 481px;
+  }
+}
+
+.calendar-styles {
+  width: 100%;
+  height: 100%;
+  background-color: $color-light;
+  border-radius: 5px;
+  border: none;
+  overflow: hidden;
+  font-family: 'Rubik', sans-serif;
+
+  .react-calendar__navigation {
+    justify-content: center;
+    background-color: $color-purple;
+    height: 57px;
+
+    button {
+      color: #fff;
+      &:hover,
+      &:focus {
+        background: none;
+      }
+    }
+
+    &__next2-button,
+    &__prev2-button {
+      visibility: hidden;
+    }
+
+    &__label {
+      flex-grow: 0 !important;
+    }
+  }
+
+  .react-calendar__month-view__days__day {
+    background-color: #fff;
+    &--neighboringMonth {
+      background-color: transparent;
+    }
+    &--weekend {
+      color: black;
+      &:disabled {
+        color: #1010104d;
+      }
+    }
+  }
+
+  .react-calendar__tile {
+    text-align: left;
+    padding: 10px 0 35px 10px;
+    font-size: 20px;
+    position: relative;
+    &--active {
+      background: #fff !important;
+      color: black;
+      border: 2px solid $color-blue;
+    }
+    &--now {
+      background-color: #fff;
+      &:hover {
+        background: $color-purple;
+      }
+    }
+    &:disabled {
+      background-color: transparent;
+    }
+  }
+
+  &__mark {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 22px;
+    height: 22px;
+    background-color: $color-blue;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+  }
+}
